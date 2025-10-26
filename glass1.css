@@ -1,0 +1,41 @@
+/* Glass Morphism Background Effect */
+
+:root {
+  --user-bg-image: url('https://example.com/your-image.jpg');
+}
+
+body {
+  background-image: var(--user-bg-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#outer {
+  background-color: transparent;
+}
+
+/* Glassmorphism effect for main content areas */
+#dashboard,
+#dashboard.own,
+li.blurb,
+.blurb .blurb,
+dl.meta,
+.listbox,
+.comment fieldset,
+li.comment:not(:has(.edit_comment)) {
+  background-color: rgba(42, 39, 63, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* Optional: adjust for better readability */
+#header {
+  background-color: rgba(42, 39, 63, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-menu,
+#small_login {
+  background-color: rgba(68, 65, 90, 0.6);
+  backdrop-filter: blur(8px);
+}
